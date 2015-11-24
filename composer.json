@@ -1,0 +1,23 @@
+{
+    "name": "devgroup/yii2-polyglot",
+    "description": "Yii2 integration for AirBnB Polyglot.js",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","i18n","polyglot","polyglot.js","javascript","js","internationalization","internationalisation","translation","interpolation","translate"],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Alexander Kozhevnikov",
+            "email": "b37hr3z3n@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "^2.0.6",
+        "@bower/polyglot": "^0.4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevGroup\\Polyglot\\": "src/"
+        }
+    }
+}
