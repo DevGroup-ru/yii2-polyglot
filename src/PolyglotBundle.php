@@ -20,11 +20,6 @@ class PolyglotBundle extends AssetBundle
 
     public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
 
-    public $depends = [
-        // This will add current needed translation to polyglot
-        'DevGroup\Polyglot\CurrentTranslation',
-    ];
-
     /**
      * This function extends default AssetBundle behavior adding Polyglot initialization call
      * right after including asset files

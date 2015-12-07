@@ -65,16 +65,16 @@ return [
 ];
 ```
 
-And the final thing is to register `PolyglotBundle` inside your layout view or add it as AssetBundle dependency.
+And the final thing is to register `CurrentTranslation` inside your layout view or add it as AssetBundle dependency.
 
-For adding `PolyglotBundle` into your view just add the one line into 
+For adding `CurrentTranslation` into your view just add the one line into 
 `views/layouts/main.php` near your `AppAsset::register` call:
 
 ```php
-DevGroup\Polyglot\PolyglotBundle::register($this);
+DevGroup\Polyglot\CurrentTranslation::register($this);
 ```
 
-For adding `PolyglotBundle` as dependency for your `AppAssetBundle` modify your `assets/AppAsset.php`:
+For adding `CurrentTranslation` as dependency for your `AppAssetBundle` modify your `assets/AppAsset.php`:
 
 ```php
 <?php
@@ -98,8 +98,8 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-        /// !!! This is a dependency to PolyglotBundle !!!
-        'DevGroup\Polyglot\PolyglotBundle',
+        /// !!! This is a dependency to CurrentTranslation !!!
+        'DevGroup\Polyglot\CurrentTranslation',
     ];
 }
 

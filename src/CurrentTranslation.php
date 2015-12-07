@@ -15,6 +15,10 @@ class CurrentTranslation extends AssetBundle
 {
     public $jsOptions = ['position' => \yii\web\View::POS_BEGIN];
 
+    public $depends = [
+        'DevGroup\Polyglot\PolyglotBundle',
+    ];
+
     /**
      * @inheritdoc
      * @throws \yii\base\InvalidConfigException
@@ -39,7 +43,7 @@ class CurrentTranslation extends AssetBundle
         $language = Yii::$app->language;
         if (file_exists($this->sourcePath . "/$language.js") !== false) {
             $this->js = [
-                "/$language.js"
+                "$language.js"
             ];
         }
 
