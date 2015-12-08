@@ -3,6 +3,7 @@
 namespace DevGroup\Polyglot;
 
 use Yii;
+use yii\base\Application;
 use yii\helpers\Json;
 use yii\web\AssetBundle;
 
@@ -30,12 +31,15 @@ class PolyglotBundle extends AssetBundle
     {
         parent::registerAssetFiles($view);
 
-        $localeEncoded = Json::encode(Yii::$app->language);
 
+
+        $localeEncoded = Json::encode(Yii::$app->language);
         $js = <<<js
 var polyglot = new Polyglot({locale: $localeEncoded});
 js;
 
-        Yii::$app->controller->view->registerJs($js, \yii\web\View::POS_HEAD);
+        Yii::$app->controller->getView()->registerJs($js, \yii\web\View::POS_HEAD);
+
+
     }
 }
